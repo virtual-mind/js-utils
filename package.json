@@ -1,0 +1,36 @@
+{
+  "name": "@kzaam/js-utils",
+  "version": "1.0.1",
+  "description": "Utilities for Kzaam JS projects",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/virtual-mind/js-utils"
+  },
+  "keywords": [
+    "browser",
+    "kzaam",
+    "utils"
+  ],
+  "author": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "bowser": "2.7.0",
+    "js-md5": "0.7.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.0.3",
+    "eslint": "4.18.2",
+    "eslint-config-kzaam": "github:virtual-mind/eslint-config-kzaam#1.0.2",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "2.8.0"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "main": "./index.js",
+  "license": "MIT"
+}
