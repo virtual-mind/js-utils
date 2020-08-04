@@ -11,7 +11,7 @@ export default class BrowserCapabilities {
      * Creates new BrowserCapabilities instance.
      *
      * @param {Object} capabilitiesDB - The JSON database with capabilities.
-     * @param {boolean} [isUsingIFrame] - True if Jitsi Meet is loaded in iframe
+     * @param {boolean} [isUsingIFrame] - True if Kzaam App is loaded in iframe
      * and false otherwise.
      * @param {Object} [browserInfo] - Information about the browser.
      * @param {string} browserInfo.name - The name of the browser.
@@ -67,7 +67,7 @@ export default class BrowserCapabilities {
     }
 
     /**
-     * Checks whether the browser is supported by Jitsi Meet.
+     * Checks whether the browser is supported by Kzaam App.
      *
      * @returns {boolean}
      */

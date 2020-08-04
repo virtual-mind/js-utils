@@ -35,7 +35,7 @@ export const URI_PROTOCOL_PATTERN = '^([a-z][a-z0-9\\.\\+-]*:)';
 
 /**
  * Excludes/removes certain characters from a specific room (name) which are
- * incompatible with Jitsi Meet on the client and/or server sides.
+ * incompatible with Kzaam App on the client and/or server sides.
  *
  * @param {?string} room - The room (name) to fix.
  * @private
@@ -160,7 +160,7 @@ export function parseStandardURIString(str) {
     // XXX A URI string as defined by RFC 3986 does not contain any whitespace.
     // Usually, a browser will have already encoded any whitespace. In order to
     // avoid potential later problems related to whitespace in URI, strip any
-    // whitespace. Anyway, the Jitsi Meet app is not known to utilize unencoded
+    // whitespace. Anyway, the Kzaam app app is not known to utilize unencoded
     // whitespace so the stripping is deemed safe.
     str = str.replace(/\s/g, '');
 
@@ -240,11 +240,11 @@ export function parseStandardURIString(str) {
 }
 
 /**
- * Parses a specific URI which (supposedly) references a Jitsi Meet resource
+ * Parses a specific URI which (supposedly) references a Kzaam App resource
  * (location).
  *
  * @param {(string|undefined)} uri - The URI to parse which (supposedly)
- * references a Jitsi Meet resource (location).
+ * references a Kzaam App resource (location).
  * @public
  * @returns {{
  *     contextRoot: string,
@@ -265,7 +265,7 @@ export function parseURIString(uri) {
 
     const obj = parseStandardURIString(_fixURIStringScheme(uri));
 
-    // Add the properties that are specific to a Jitsi Meet resource (location)
+    // Add the properties that are specific to a Kzaam App resource (location)
     // such as contextRoot, room:
 
     // contextRoot
@@ -274,7 +274,7 @@ export function parseURIString(uri) {
     // The room (name) is the last component/segment of pathname.
     const { pathname } = obj;
 
-    // XXX While the components/segments of pathname are URI encoded, Jitsi Meet
+    // XXX While the components/segments of pathname are URI encoded, Kzaam App
     // on the client and/or server sides still don't support certain characters.
     const contextRootEndIndex = pathname.lastIndexOf('/');
     let room = pathname.substring(contextRootEndIndex + 1) || undefined;

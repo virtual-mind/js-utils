@@ -20,7 +20,7 @@ export function getAvatarURL({ avatarID, email, id }: {
         urlPrefix: string,
         urlSuffix: string
 } = {
-    urlPrefix: 'https://abotars.jitsi.net/meeple/',
+    urlPrefix: 'https://abotars.kzaam.com/meeple/',
     urlSuffix: ''
 }) {
     return getGravatarURL(email)
